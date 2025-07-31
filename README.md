@@ -222,6 +222,9 @@ This project is licensed under the terms specified in the LICENSE file.
 
 ## Changelog
 
+### v0.0.2
+- Project urls added
+
 ### v0.0.1
 - Initial release
 - Basic chat functionality

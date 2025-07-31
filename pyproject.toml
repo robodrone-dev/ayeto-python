@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ayeto"
-version = "0.0.1"
+version = "0.0.2"
 description = "AYETO API Client"
 authors = [
     { name="AYETO team", email="info@ayeto.ai" }
@@ -21,3 +21,8 @@ dependencies = [
 dev = [
     "pytest>=8.4.1",
 ]
+
+[project.urls]
+Homepage = "https://ayeto.ai"
+Source = "https://github.com/robodrone-dev/ayeto-python"
+Tracker = "https://github.com/robodrone-dev/ayeto-python/issues"

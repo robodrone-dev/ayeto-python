@@ -1,5 +1,6 @@
 .venv/
 __pycache__/
 ayeto.egg-info/
+dist/
 
 *.pyc
