@@ -1,6 +1,9 @@
 .venv/
 __pycache__/
+.vscode/
 ayeto.egg-info/
 dist/
+build/
+tmp/
 
 *.pyc

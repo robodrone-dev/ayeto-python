@@ -4,6 +4,8 @@ from pydantic import BaseModel, Field
 from typing import List, Optional, Union
 from enum import Enum
 import uuid
+import base64
+import os
 
 from ._utils import id_factory, timestamp_factory
 
@@ -73,6 +75,17 @@ class EncodedData(BaseModel):
             # Default filename if not provided
             data['filename'] = f"file_{uuid.uuid4()}.bin"
         super().__init__(**data)
+
+    @classmethod
+    def from_path(cls, path: str, mime_type: str) -> EncodedData:
+        """Create an EncodedData instance from a file path."""
+
+        with open(path, "rb") as f:
+            file_data = f.read()
+            encoded_data = f"data:{mime_type};base64,{base64.b64encode(file_data).decode('utf-8')}"
+            filename = os.path.basename(path)
+
+        return cls(data=encoded_data, mime_type=mime_type, filename=filename)
 
 
 class LLMAttachmentData(BaseModel):

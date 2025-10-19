@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ayeto"
-version = "0.0.2"
+version = "0.0.3"
 description = "AYETO API Client"
 authors = [
     { name="AYETO team", email="info@ayeto.ai" }

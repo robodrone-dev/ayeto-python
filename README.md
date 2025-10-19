@@ -222,6 +222,9 @@ This project is licensed under the terms specified in the LICENSE file.
 
 ## Changelog
 
+### v0.0.3
+- Added EncodedData loader (classmethod `from_path`)
+
 ### v0.0.2
 - Project urls added
 
